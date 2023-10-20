@@ -1,13 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  mode: 'jit',
-  content: ["./**/*.{php}"],
+  mode: "jit",
+  content: ["./**/*.{html}"],
   theme: {
     extend: {
       colors: {
-        primary: '#FFB649'
-      }
+        primary: "#FFB649",
+      },
     },
   },
   plugins: [],
-}
+};
