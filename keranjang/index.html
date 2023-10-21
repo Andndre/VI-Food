@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VI Food</title>
+    <link rel="stylesheet" href="../css/dist/output.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.js"></script>
+  </head>
+  <body class="bg-gray-200">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm">
+      <div
+        class="flex items-center h-16 justify-between w-full gap-6 container mx-auto px-4"
+      >
+        <img src="../public/logo.svg" alt="logo" class="h-5" />
+        <div class="flex gap-4 items-center">
+          <div class="flex gap-3 items-center">
+            <a
+              class="flex gap-2 items-center px-6 py-3 bg-primary/10 hover:bg-primary/25 transition-all duration-300 rounded-md"
+              href="../pembelian"
+              ><i data-feather="bar-chart-2"></i> Pembelian</a
+            >
+            <a
+              class="flex gap-2 items-center px-6 py-3 bg-primary/10 hover:bg-primary/25 transition-all duration-300 rounded-md"
+              href="../pembelian"
+              ><i data-feather="shopping-cart"></i> Keranjang</a
+            >
+          </div>
+          <div class="w-10 h-10 bg-gray-400 rounded-full"></div>
+        </div>
+      </div>
+    </nav>
+    <!--  -->
+
+    <!-- bagian kiri keranjang -->
+    <div class="flex">
+      <div class="container bg-white w-80 h-[960px]">
+        <div class="flex flex-col justify-center items-center">
+          <span class="mt-9 font-bold text-base"> Nama Toko</span>
+          <span class="bg-orange-300 rounded-full mt-5 font-bold px-2 py-2">
+            Warung Pak Wayan</span
+          >
+        </div>
+      </div>
+      <div class="flex flex-col w-full">
+
+        <div class=" flex bg-orange-300 h-40 mt-3 ml-3 mb-3">
+          
+          <div class=" flex justify-center items-center object-cover w-40 h-45 aspect-square">
+            <img class="ml-[100px]"
+              src="https://cdn0-production-images-kly.akamaized.net/5WOrUgjfuB-eX3usChkPo99gc8g=/0x342:5989x3718/469x260/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/3930827/original/066100900_1644554867-shutterstock_1984582070.jpg"
+              alt="mie goreng komplit"/>
+          </div>
+
+          <div class="flex flex-col justify-start items-start ml-3">
+            <span class="container bg-neutral-500 rounded-md mt-9 ml-12 font-bold text-white text-sm text-center">Mie Goreng Komplit</span>
+            <span class="container font-bold ml-14 mt-4">Rp.22.500</span>
+            <button class="bg-neutral-500 h-7 w-16 ml-14 mt-3 rounded-md">
+               <span>2</span> 
+            </button>
+          </div>
+
+          
+         
+        </div>
+
+        <div class="bg-orange-300 h-32 mt-3 ml-3"></div>
+      </div>
+    </div>
+
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
