@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VI Food</title>
-    <link rel="stylesheet" href="../css/dist/output.css" />
+    <link rel="stylesheet" href="../../css/dist/output.css" />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
       integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -19,7 +19,7 @@
         class="bg-card-foreground dark:bg-black dark:text-white text-card border-r shadow-xl min-h-screen max-w-[250px] p-4 z-[100] flex flex-col fixed md:static"
       >
         <div class="flex flex-col items-center mt-8">
-          <img id="sidebar-logo" src="../public/logo-white.svg" alt="logo" class="transition-all" width="128px" height="128px"/>
+          <img id="sidebar-logo" src="../../public/logo-white.svg" alt="logo" class="transition-all" width="128px" height="128px"/>
           <p class="font-medium sidebar-text">
             Warung Pak Wayan
           </p>
@@ -32,9 +32,9 @@
         <ul class="space-y-1 flex-1 text-gray-300">
           <li
             title="Dashboard"
-            class="transition-all duration-300 rounded-md px-4 py-2 bg-primary/25 text-primary"
+            class="transition-all duration-300 rounded-md px-4 py-2 bg-gray-900"
           >
-            <a class="flex items-center gap-3" href="#">
+            <a class="flex items-center gap-3" href="../index.html">
 							<i data-feather="bar-chart-2"></i>
               <div class="sidebar-text">Dashboard</div></a
             > 
@@ -43,7 +43,7 @@
             title="Manajemen Menu"
             class="transition-all duration-300 rounded-md px-4 py-2 bg-gray-900"
           >
-            <a class="flex items-center gap-3" href="./manajemen-menu/index.html">
+            <a class="flex items-center gap-3" href="../manajemen-menu/index.html">
               <i data-feather="book-open"></i>
 							<div class="sidebar-text">Manajemen Menu</div>
 						</a>
@@ -52,16 +52,16 @@
             title="Manajemen Kursi"
             class="transition-all duration-300 rounded-md px-4 py-2 bg-gray-900"
           >
-            <a class="flex items-center gap-3" href="./manajemen-kursi/index.html">
+            <a class="flex items-center gap-3" href="../manajemen-kursi/index.html">
               <i data-feather="list"></i>
 							<div class="sidebar-text">Manajemen Kursi</div>
 						</a>
           </li>
           <li
             title="Ulasan"
-            class="transition-all duration-300 rounded-md px-4 py-2 bg-gray-900"
+            class="transition-all duration-300 rounded-md px-4 py-2 bg-primary/25 text-primary"
           >
-            <a class="flex items-center gap-3" href="./ulasan/index.html">
+            <a class="flex items-center gap-3" href="#">
               <i data-feather="message-circle"></i>
 							<div class="sidebar-text">Ulasan</div>
 						</a>
@@ -99,59 +99,15 @@
             /></span>
           </div>
         </header>
-        <div class="flex-1 px-4 md:px-8 py-8">
-          <div>
-            <h1
-              class="scroll-m-20 pb-2 text-3xl font-bold tracking-tight transition-colors"
-            >
-              Dashboard
-            </h1>
-            <div
-              data-orientation="horizontal"
-              role="none"
-              class="shrink-0 bg-border h-[1px] w-full my-4"
-            ></div>
-            <div class="grid grid-cols-6 gap-3">
-              <div
-                class="col-span-6 md:col-span-3 lg:col-span-2 rounded-md border-gray-400 border p-4 relative shadow-sm"
-              >
-                <h2
-                  class="scroll-m-20 pb-2 text-2xl font-semibold tracking-tight transition-colors"
-                >
-                  14
-                </h2>
-                <p class="font-medium text-muted-foreground">MENU</p>
-								<i data-feather="book-open" class="h-8 w-8 absolute top-4 right-4 text-green-500"></i>
-              </div>
-              <div
-                class="col-span-6 md:col-span-3 lg:col-span-2 rounded-md border-gray-400 border p-4 relative shadow-sm"
-              >
-                <h2
-                  class="scroll-m-20 pb-2 text-2xl font-semibold tracking-tight transition-colors"
-                >
-                  1.3K
-                </h2>
-                <p class="font-medium text-muted-foreground">ULASAN</p>
-                <i data-feather="message-circle" class="h-8 w-8 absolute top-4 right-4 text-green-500"></i>
-              </div>
-              <div
-                class="col-span-6 md:col-span-3 lg:col-span-2 rounded-md border-gray-400 border p-4 relative shadow-sm"
-              >
-                <h2
-                  class="scroll-m-20 pb-2 text-2xl font-semibold tracking-tight transition-colors"
-                >
-                  4
-                </h2>
-                <p class="font-medium text-muted-foreground">KURSI KOSONG</p>
-                <i data-feather="briefcase" class="h-8 w-8 absolute top-4 right-4 text-green-500"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-        <footer class="px-8 container mx-auto py-4 border-t">
-          Copyright © 2023 VI-Food.co
-        </footer>
-      </div>
+				<!-- Konten -->
+        <div class="px-4 md:px-8 py-8">
+					
+				</div>
+				<!-- Konten -->
+				<footer class="px-8 container mx-auto py-4 border-t">
+					Copyright © 2023 VI-Food.co
+				</footer>
+			</div>
     </div>
     <script>
       // Logika untuk sidebar
