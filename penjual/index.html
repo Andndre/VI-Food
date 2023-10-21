@@ -15,11 +15,12 @@
   <body class="bg-gray-200">
     <div class="flex w-full min-h-screen">
       <aside
+        id="sidebar"
         class="bg-card-foreground dark:bg-black dark:text-white text-card border-r shadow-xl min-h-screen max-w-[250px] p-4 z-[100] flex flex-col fixed md:static"
       >
         <div class="flex flex-col items-center mt-8">
-          <img src="" alt=""/>
-          <p class="font-medium text-muted dark:text-muted-foreground">
+          <img id="sidebar-logo" src="../public/logo-white.svg" alt="logo" class="transition-all" width="128px" height="128px"/>
+          <p class="font-medium sidebar-text">
             SSO ADMIN
           </p>
         </div>
@@ -28,22 +29,41 @@
           role="none"
           class="shrink-0 bg-border h-[1px] w-full my-4"
         ></div>
-        <ul class="space-y-1 flex-1">
+        <ul class="space-y-1 flex-1 text-gray-300">
           <li
             title="Dashboard"
-            class="hover:bg-accent-foreground dark:hover:bg-accent transition-all rounded-md dark:bg-accent text-accent dark:text-accent-foreground px-4 py-2"
+            class="transition-all duration-300 rounded-md px-4 py-2 bg-primary/25 text-primary"
           >
             <a class="flex items-center gap-3" href="#">
 							<i data-feather="bar-chart-2"></i>
-              Dashboard</a
-            >
+              <div class="sidebar-text">Dashboard</div></a
+            > 
           </li>
           <li
-            title="Manajemen Grup"
-            class="hover:bg-accent-foreground dark:hover:bg-accent transition-all rounded-md text-muted-foreground px-4 py-2"
+            title="Manajemen Menu"
+            class="transition-all duration-300 rounded-md px-4 py-2 bg-gray-900"
           >
-            <a class="flex items-center gap-3" href="/admin/manajemen-grup">
-							Manajemen Grup
+            <a class="flex items-center gap-3" href="#">
+              <i data-feather="book-open"></i>
+							<div class="sidebar-text">Manajemen Menu</div>
+						</a>
+          </li>
+          <li
+            title="Manajemen Kursi"
+            class="transition-all duration-300 rounded-md px-4 py-2 bg-gray-900"
+          >
+            <a class="flex items-center gap-3" href="#">
+              <i data-feather="list"></i>
+							<div class="sidebar-text">Manajemen Kursi</div>
+						</a>
+          </li>
+          <li
+            title="Ulasan"
+            class="transition-all duration-300 rounded-md px-4 py-2 bg-gray-900"
+          >
+            <a class="flex items-center gap-3" href="#">
+              <i data-feather="message-circle"></i>
+							<div class="sidebar-text">Ulasan</div>
 						</a>
           </li>
         </ul>
@@ -54,24 +74,11 @@
             class="shrink-0 bg-border h-[1px] w-full my-4"
           ></div>
           <button
-            class="bg-accent-foreground dark:bg-accent text-accent dark:text-accent-foreground transition-all rounded-md p-2 flex gap-3 w-full"
+            id="sidebar-tutup"
+            class="transition-all duration-300 bg-gray-900 transition-all rounded-md p-2 flex gap-3 w-full"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-arrow-left"
-            >
-              <path d="m12 19-7-7 7-7"></path>
-              <path d="M19 12H5"></path>
-            </svg>
-            Tutup
+            <i data-feather="arrow-left"></i>
+            <span class="sidebar-text">Tutup</span>
           </button>
         </div>
       </aside>
@@ -177,7 +184,31 @@
       </div>
     </div>
     <script>
+      // Logika untuk sidebar
+      const tombolClose = $('#sidebar-tutup');
+      const sidebar = $('#sidebar');
+      const sidebarLogo = $('#sidebar-logo');
+      const sidebarTexts = $('.sidebar-text');
+      
+      let open = true;
+      
+      tombolClose.click(() => {
+        open = !open;
+        sidebarTexts.each((i, e) => {
+          e.classList.toggle('hidden');
+        });
+        sidebar.toggleClass('fixed');
+        sidebarLogo.toggleClass("w-16 h-16");
+        sidebarLogo.toggleClass("w-7 h-7");
+      });
+
+      // Feather icon... 
       feather.replace();
     </script>
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
   </body>
 </html>
