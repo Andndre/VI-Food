@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VI Food</title>
+    <link rel="stylesheet" href="../css/dist/output.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.js"></script>
+  </head>
+  <body class="bg-gray-200">
+    <div class="flex w-full min-h-screen">
+      <aside
+        class="bg-card-foreground dark:bg-black dark:text-white text-card border-r shadow-xl min-h-screen max-w-[250px] p-4 z-[100] flex flex-col fixed md:static"
+      >
+        <div class="flex flex-col items-center mt-8">
+          <img src="" alt=""/>
+          <p class="font-medium text-muted dark:text-muted-foreground">
+            SSO ADMIN
+          </p>
+        </div>
+        <div
+          data-orientation="horizontal"
+          role="none"
+          class="shrink-0 bg-border h-[1px] w-full my-4"
+        ></div>
+        <ul class="space-y-1 flex-1">
+          <li
+            title="Dashboard"
+            class="hover:bg-accent-foreground dark:hover:bg-accent transition-all rounded-md dark:bg-accent text-accent dark:text-accent-foreground px-4 py-2"
+          >
+            <a class="flex items-center gap-3" href="#">
+							<i data-feather="bar-chart-2"></i>
+              Dashboard</a
+            >
+          </li>
+          <li
+            title="Manajemen Grup"
+            class="hover:bg-accent-foreground dark:hover:bg-accent transition-all rounded-md text-muted-foreground px-4 py-2"
+          >
+            <a class="flex items-center gap-3" href="/admin/manajemen-grup">
+							Manajemen Grup
+						</a>
+          </li>
+        </ul>
+        <div>
+          <div
+            data-orientation="horizontal"
+            role="none"
+            class="shrink-0 bg-border h-[1px] w-full my-4"
+          ></div>
+          <button
+            class="bg-accent-foreground dark:bg-accent text-accent dark:text-accent-foreground transition-all rounded-md p-2 flex gap-3 w-full"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-left"
+            >
+              <path d="m12 19-7-7 7-7"></path>
+              <path d="M19 12H5"></path>
+            </svg>
+            Tutup
+          </button>
+        </div>
+      </aside>
+      <div class="flex-1 flex flex-col">
+        <header class="flex justify-end shadow-sm border-b px-4 lg:px-8 py-2">
+          <div class="flex items-center gap-3">
+            <span
+              class="relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full cursor-pointer"
+              type="button"
+              aria-haspopup="dialog"
+              aria-expanded="false"
+              aria-controls="radix-:r0:"
+              data-state="closed"
+              ><img
+                class="aspect-square h-full w-full"
+                alt="user avatar"
+                src="https://avatars.githubusercontent.com/u/81848639?v=4"
+            /></span>
+          </div>
+        </header>
+        <div class="flex-1 px-4 md:px-8 py-8">
+          <div>
+            <h1
+              class="scroll-m-20 pb-2 text-3xl font-bold tracking-tight transition-colors"
+            >
+              Dashboard
+            </h1>
+            <div
+              data-orientation="horizontal"
+              role="none"
+              class="shrink-0 bg-border h-[1px] w-full my-4"
+            ></div>
+            <div class="grid grid-cols-6 gap-3">
+              <div
+                class="col-span-6 md:col-span-3 lg:col-span-2 rounded-md border p-4 relative shadow-sm"
+              >
+                <h2
+                  class="scroll-m-20 pb-2 text-2xl font-semibold tracking-tight transition-colors"
+                >
+                  1
+                </h2>
+                <p class="font-medium text-muted-foreground">GROUP</p>
+								<i data-feather="table"></i>
+              </div>
+              <div
+                class="col-span-6 md:col-span-3 lg:col-span-2 rounded-md border p-4 relative shadow-sm"
+              >
+                <h2
+                  class="scroll-m-20 pb-2 text-2xl font-semibold tracking-tight transition-colors"
+                >
+                  15
+                </h2>
+                <p class="font-medium text-muted-foreground">USER</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-8 w-8 absolute top-4 right-4 text-orange-400"
+                >
+                  <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </div>
+              <div
+                class="col-span-6 md:col-span-3 lg:col-span-2 rounded-md border p-4 relative shadow-sm"
+              >
+                <h2
+                  class="scroll-m-20 pb-2 text-2xl font-semibold tracking-tight transition-colors"
+                >
+                  4
+                </h2>
+                <p class="font-medium text-muted-foreground">APPS</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-8 w-8 absolute top-4 right-4 text-green-400"
+                >
+                  <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                  <path d="M10 4v4"></path>
+                  <path d="M2 8h20"></path>
+                  <path d="M6 4v4"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="container mx-auto py-4 border-t">
+          Copyright © 2023 VI-Food.co
+        </footer>
+      </div>
+    </div>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
