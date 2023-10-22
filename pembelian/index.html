@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VI Food</title>
+    <link rel="stylesheet" href="../css/dist/output.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.js"></script>
+  </head>
+  <body class="bg-gray-200">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm">
+      <div
+        class="flex items-center h-16 justify-between w-full gap-6 container mx-auto px-4"
+      >
+        <img src="../public/logo.svg" alt="logo" class="h-5" />
+        <div class="flex gap-4 items-center">
+          <div class="flex gap-3 items-center">
+            <a
+              class="flex gap-2 items-center px-6 py-3 bg-primary/10 hover:bg-primary/25 transition-all duration-300 rounded-md"
+              href="../pembelian"
+              ><i data-feather="bar-chart-2"></i> Pembelian</a
+            >
+            <a
+              class="flex gap-2 items-center px-6 py-3 bg-primary/10 hover:bg-primary/25 transition-all duration-300 rounded-md"
+              href="../keranjang/"
+              ><i data-feather="shopping-cart"></i> Keranjang</a
+            >
+          </div>
+          <div class="w-10 h-10 bg-gray-400 rounded-full"></div>
+        </div>
+      </div>
+    </nav>
+    <!--  -->
+
+    <!-- pembelian -->
+    <div>
+        <span class="flex justify-start items-start mt-10 ml-12"> Pesanan Aktif</span>
+    </div>
+
+    <div class=" flex flex-col container">
+        <img  class="object-cover h-40 w-[1200px] ml-10 mt-6 rounded-3xl"  src="https://images.unsplash.com/photo-1612939675110-fe3a0129a024?auto=format&fit=crop&q=80&w=1470&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Pak Wayan">
+        <h1 class="absolute text-white font-bold text-xl ml-48 mt-12"> Warung Pak Wayan</h1>
+        <span class="absolute text-white text-sm ml-48 mt-20"> Kode: 448</span>
+        <span class="absolute text-white bg-lime-500 rounded-md text-sm ml-48 mt-28 mx-8 my-3"> di Perjalanan</span>
+        <button class=" absolute  text-white bg-red-500 rounded-md text-sm ml-48 mt-36 mx-8 my-3"> Batalkan </button>
+        <img  class=" absolute object-cover h-28 aspect-square rounded-lg border-2 border-orange-500 shadow ml-16 mt-12"  src="https://destinasian.co.id/id/wp/wp-content/uploads/mama-san.jpg" alt="pak wayan">
+    </div>
+
+    <div class=" flex flex-col container">
+        <img  class="object-cover h-40 w-[1200px] ml-10 mt-6 rounded-3xl"  src="https://images.unsplash.com/photo-1658218615127-40b7068bbae5?auto=format&fit=crop&q=80&w=1470&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Pak Igun Teguh">
+        
+        <h1 class="absolute text-white font-bold text-xl ml-48 mt-12"> Warung Pak Igun Teguh</h1>
+        <span class="absolute text-white text-sm ml-48 mt-20"> Kode: 556</span>
+        <span class="absolute text-white bg-lime-500 rounded-md text-sm ml-48 mt-28 mx-8 my-3"> di Perjalanan</span>
+        <button class=" absolute  text-white bg-red-500 rounded-md text-sm ml-48 mt-36 mx-8 my-3"> Batalkan </button>
+        <img  class=" absolute object-cover h-28 aspect-square rounded-lg border-2 border-orange-500 shadow ml-16 mt-12"  src="https://alacasa.id/lkgallery/teaser/screenshot-at-2018-11-15-17-27-54_45_20181115172612vd0bi5.jpg" alt="igun teguh">
+    </div>
+
+    <div>
+        <span class="flex justify-start items-start mt-10 ml-12"> History Pesanan</span>
+    </div>
+
+    <div class=" flex flex-col container">
+        <img  class="object-cover h-40 w-[1200px] ml-10 mt-6 rounded-3xl"  src="https://images.unsplash.com/photo-1634871572365-8bc444e6faea?auto=format&fit=crop&q=80&w=1470&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Pak Wayan">
+        
+        <h1 class="absolute text-white font-bold text-xl ml-48 mt-12"> Warung Pak Wayan</h1>
+        <span class="absolute text-white text-sm ml-48 mt-20"> Kode: 568</span>
+        <span class="absolute text-white bg-lime-500 rounded-md text-sm ml-48 mt-28 mx-8 my-3"> Sukses </span>
+        <img  class=" absolute object-cover h-28 aspect-square rounded-lg border-2 border-orange-500 shadow ml-16 mt-12"  src="https://destinasian.co.id/id/wp/wp-content/uploads/mama-san.jpg" alt="pak wayan">
+    </div>
+
+
+
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
