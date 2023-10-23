@@ -19,10 +19,15 @@
         class="bg-card-foreground bg-black text-white text-card border-r shadow-xl min-h-screen max-w-[250px] p-4 z-[100] flex flex-col fixed md:static"
       >
         <div class="flex flex-col items-center mt-8">
-          <img id="sidebar-logo" src="../../public/logo-white.svg" alt="logo" class="transition-all" width="128px" height="128px"/>
-          <p class="font-medium sidebar-text">
-            Warung Pak Wayan
-          </p>
+          <img
+            id="sidebar-logo"
+            src="../../public/logo-white.svg"
+            alt="logo"
+            class="transition-all"
+            width="128px"
+            height="128px"
+          />
+          <p class="font-medium sidebar-text">Warung Pak Wayan</p>
         </div>
         <div
           data-orientation="horizontal"
@@ -35,36 +40,42 @@
             class="transition-all duration-300 rounded-md px-4 py-2 bg-gray-900"
           >
             <a class="flex items-center gap-3" href="../index.html">
-							<i data-feather="bar-chart-2"></i>
+              <i data-feather="bar-chart-2"></i>
               <div class="sidebar-text">Dashboard</div></a
-            > 
+            >
           </li>
           <li
             title="Manajemen Menu"
             class="transition-all duration-300 rounded-md px-4 py-2 bg-gray-900"
           >
-            <a class="flex items-center gap-3" href="../manajemen-menu/index.html">
+            <a
+              class="flex items-center gap-3"
+              href="../manajemen-menu/index.html"
+            >
               <i data-feather="book-open"></i>
-							<div class="sidebar-text">Manajemen Menu</div>
-						</a>
+              <div class="sidebar-text">Manajemen Menu</div>
+            </a>
           </li>
           <li
             title="Manajemen Kursi"
             class="transition-all duration-300 rounded-md px-4 py-2 bg-primary/25 text-primary"
           >
-            <a class="flex items-center gap-3" href="../manajemen-kursi/index.html">
+            <a
+              class="flex items-center gap-3"
+              href="../manajemen-kursi/index.html"
+            >
               <i data-feather="list"></i>
-							<div class="sidebar-text">Manajemen Kursi</div>
-						</a>
+              <div class="sidebar-text">Manajemen Kursi</div>
+            </a>
           </li>
           <li
             title="Ulasan"
-            class="transition-all duration-300 rounded-md px-4 py-2 bg-gray-900 "
+            class="transition-all duration-300 rounded-md px-4 py-2 bg-gray-900"
           >
             <a class="flex items-center gap-3" href="../ulasan/index.html">
               <i data-feather="message-circle"></i>
-							<div class="sidebar-text">Ulasan</div>
-						</a>
+              <div class="sidebar-text">Ulasan</div>
+            </a>
           </li>
         </ul>
         <div>
@@ -97,33 +108,88 @@
             </a>
           </div>
         </header>
-				<!-- Konten -->
+        <!-- Konten -->
         <div class="px-4 md:px-8 py-8">
-					
-				</div>
-				<!-- Konten -->
-				<footer class="px-8 container mx-auto py-4 border-t">
-					Copyright © 2023 VI-Food.co
-				</footer>
-			</div>
+          <!-- manajemen kursi Mulai -->
+          <div class="flex flex-col gap-1.5 lg:">
+            <span class="text-3xl font-bold">Manajemen kursi</span>
+            <span> Kursi Kosong: 16</span>
+            <span>Kursi total: 75</span>
+
+            <div
+              class="lg:flex lg:flex-row lg:justify-end lg:items-end lg:pr-5"
+            >
+              <button class="bg-primary mt-3 px-2 py-2 rounded-md">
+                Tambah
+              </button>
+            </div>
+          </div>
+
+          <div class="overflow-x-scroll mt-6 max-w-full">
+            <table class="table-auto w-full">
+              <thead class="bg-gray-500 text-white">
+                <tr>
+                  <th class="min-w-[12rem]">Kode Kursi</th>
+                  <th class="min-w-[12rem]">Status</th>
+                  <th class="min-w-[12rem]">Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>s45</td>
+                  <td class="p-3">
+                    <span class="px-2 text-sm py-1 rounded-md bg-green-100"
+                      >Kosong</span
+                    >
+                  </td>
+                  <td>
+                    <button class="px-2 text-sm py-1 rounded-md bg-yellow-100">
+                      Edit
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>5f3</td>
+                  <td class="p-3">
+                    <span class="px-2 text-sm py-1 rounded-md bg-green-100"
+                      >Kosong</span
+                    >
+                  </td>
+                  <td>
+                    <button class="px-2 text-sm py-1 rounded-md bg-yellow-100">
+                      Edit
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- manajemen kursi selesai -->
+        </div>
+        <!-- Konten -->
+        <footer class="px-8 container mx-auto py-4 border-t">
+          Copyright © 2023 VI-Food.co
+        </footer>
+      </div>
     </div>
     <script>
       // Logika untuk sidebar
-      const tombolClose = $('#sidebar-tutup');
-      const sidebar = $('#sidebar');
-      const sidebarLogo = $('#sidebar-logo');
-      const sidebarTexts = $('.sidebar-text');
-      
+      const tombolClose = $("#sidebar-tutup");
+      const sidebar = $("#sidebar");
+      const sidebarLogo = $("#sidebar-logo");
+      const sidebarTexts = $(".sidebar-text");
+
       tombolClose.click(() => {
         sidebarTexts.each((i, e) => {
-          e.classList.toggle('hidden');
+          e.classList.toggle("hidden");
         });
-        sidebar.toggleClass('fixed');
+        sidebar.toggleClass("fixed");
         sidebarLogo.toggleClass("w-16 h-16");
         sidebarLogo.toggleClass("w-7 h-7");
       });
 
-      // Feather icon... 
+      // Feather icon...
       feather.replace();
     </script>
     <style>
