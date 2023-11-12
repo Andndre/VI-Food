@@ -98,47 +98,50 @@
           </div>
         </header>
 				<!-- Konten -->
-        <div class="px-4 md:px-8 py-8 ">
-          <div class="flex flex-col lg:justify-between lg:items-center gap-3 pb-8 lg:flex-row  ">
-            <h1 class="font-bold text-xl">Semua Menu</h1>
-            <button class="bg-primary rounded-md px-2 py-1 text sm mr-auto lg:mr-0">
-               Tambahkan Menu
-            </button>
-          </div>
-
-          <div class="grid grid-cols-12 gap-4">
-							<!-- Card Start -->
-							<div class="overflow-hidden col-span-12 md:col-span-6 lg:col-span-4 bg-white rounded-2xl shadow-sm">
-								<img class="w-full object-cover aspect-video" src="https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2023/08/01045246/ini-resep-mie-goreng-dengan-bahan-sederhana-yang-menggugah-selera-halodoc.jpg.webp" alt="">
-								<div class="p-4 space-y-2">
-									<h3 class="font-bold text-xl">Mie Goreng Sehat<h3>
-									<div class="flex justify-between items-center flex-wrap gap-3 pt-4">
-										<span class="text-lg text-gray-400 font-semibold">Rp. 12.000,00</span>
-										<a class="flex gap-2 items-center px-6 py-3 ml-auto bg-primary/20 hover:bg-primary transition-all duration-300 font-semibold rounded-lg" href="/tempat/index.html"><i class="h-5" data-feather="edit-2"></i> Edit</a>
-									</div>
-								</div>
-							</div>
-							<!-- Card End -->
-							<!-- Card Start -->
-							<div class="overflow-hidden col-span-12 md:col-span-6 lg:col-span-4 bg-white rounded-2xl shadow-sm">
-								<img class="w-full object-cover aspect-video" src="https://www.masakapahariini.com/wp-content/uploads/2022/03/resep-capcay-untuk-sahur.jpg" alt="">
-								<div class="p-4 space-y-2">
-									<h3 class="font-bold text-xl">Capcay<h3>
-									<div class="flex justify-between items-center flex-wrap gap-3 pt-4">
-										<span class="text-lg text-gray-400 font-semibold">Rp. 12.000,00</span>
-										<a class="flex gap-2 items-center px-6 py-3 ml-auto bg-primary/20 hover:bg-primary transition-all duration-300 font-semibold rounded-lg" href="/tempat/index.html"><i class="h-5" data-feather="edit-2"></i> Edit</a>
-									</div>
-								</div>
-							</div>
-							<!-- Card End -->
-              <div class="flex items-center gap-3">
-                <!-- Tombol Tambah Menu -->
-                <a href="../tambah-menu" class="flex bg-primary/20 hover:bg-primary transition-all duration-300 text-primary px-4 py-2 rounded-lg mb-72">
-                  <i class="h-5" data-feather="plus"></i> Tambah Menu
-                </a>
-              </div>
-						</div>
-					</div>
+                <body class="bg-gray-200">
+                    <div class="flex w-full min-h-screen">
+                        <!-- Sidebar (sama seperti sebelumnya) -->
+                        <aside id="sidebar" class="bg-card-foreground text-white text-card border-r shadow-xl min-h-screen max-w-[250px] p-4 z-[100] flex flex-col fixed md:static">
+                            <!-- ... (kode sidebar sebelumnya) ... -->
+                        </aside>
+                        
+                        <!-- Konten Halaman -->
+                        <div class="flex-1 flex flex-col">
+                            <header class="flex justify-end shadow-sm border-b px-4 lg:px-8 py-2">
+                                <div class="flex items-center gap-3">
+                                    <!-- ... (kode avatar sebelumnya) ... -->
+                                </div>
+                            </header>
+                            <!-- Konten Tambah Menu -->
+                            <div class="px-4 md:px-8 py-8 flex items-center justify-center">
+                                <div class="max-w-md w-full">
+                                    <h1 class="font-bold text-xl text-center mb-8">Tambah Menu</h1>
+                                    <form action="/proses-tambah-menu" method="post">
+                                        <!-- Form Tambah Menu -->
+                                        <div class="mb-4">
+                                            <label for="namaMenu" class="block text-sm font-medium text-black font-bold text-xl text-center">Nama Menu</label>
+                                            <input type="text" id="namaMenu" name="namaMenu" class="mt-1 p-2 w-full border rounded-md" required>
+                                        </div>
+                                        <div class="mb-4">
+                                            <label for="harga" class="block text-sm font-medium text-black font-bold text-xl text-center">Harga</label>
+                                            <input type="text" id="harga" name="harga" class="mt-1 p-2 w-full border rounded-md" required>
+                                        </div>
+                                        <div class="mb-4">
+                                            <label for="deskripsi" class="block text-sm font-medium text-black font-bold text-xl text-center">Deskripsi</label>
+                                            <textarea id="deskripsi" name="deskripsi" rows="3" class="mt-1 p-2 w-full border rounded-md" required></textarea>
+                                        </div>
+                                        <div class="mb-4">
+                                            <label for="gambar" class="block text-sm font-medium text-black font-bold text-xl text-center">Gambar</label>
+                                            <input type="file" id="gambar" name="gambar" class="mt-1 p-2 w-full border rounded-md" accept="image/*" required>
+                                        </div>
+                                        <a href="../manajemen-menu" class="bg-primary/20 hover:bg-primary transition-all duration-300 text-black text-center px-4 py-2 rounded-lg mx-auto">
+                                            Simpan Menu
+                                        </a>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 					<!-- Konten -->
 					<footer class="px-8 container mx-auto py-4 border-t">
 						Copyright © 2023 VI-Food.co
