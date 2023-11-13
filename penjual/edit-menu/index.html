@@ -19,10 +19,15 @@
         class="bg-card-foreground bg-black text-white text-card border-r shadow-xl min-h-screen max-w-[250px] p-4 z-[100] flex flex-col fixed md:static"
       >
         <div class="flex flex-col items-center mt-8">
-          <img id="sidebar-logo" src="../../public/logo-white.svg" alt="logo" class="transition-all" width="128px" height="128px"/>
-          <p class="font-medium sidebar-text">
-            Warung Pak Wayan
-          </p>
+          <img
+            id="sidebar-logo"
+            src="../../public/logo-white.svg"
+            alt="logo"
+            class="transition-all"
+            width="128px"
+            height="128px"
+          />
+          <p class="font-medium sidebar-text">Warung Pak Wayan</p>
         </div>
         <div
           data-orientation="horizontal"
@@ -35,9 +40,9 @@
             class="transition-all duration-300 rounded-md px-4 py-2 bg-gray-900"
           >
             <a class="flex items-center gap-3" href="../index.html">
-							<i data-feather="bar-chart-2"></i>
+              <i data-feather="bar-chart-2"></i>
               <div class="sidebar-text">Dashboard</div></a
-            > 
+            >
           </li>
           <li
             title="Manajemen Menu"
@@ -45,17 +50,20 @@
           >
             <a class="flex items-center gap-3" href="#">
               <i data-feather="book-open"></i>
-							<div class="sidebar-text">Manajemen Menu</div>
-						</a>
+              <div class="sidebar-text">Manajemen Menu</div>
+            </a>
           </li>
           <li
             title="Manajemen Kursi"
             class="transition-all duration-300 rounded-md px-4 py-2 bg-gray-900"
           >
-            <a class="flex items-center gap-3" href="../manajemen-kursi/index.html">
+            <a
+              class="flex items-center gap-3"
+              href="../manajemen-kursi/index.html"
+            >
               <i data-feather="list"></i>
-							<div class="sidebar-text">Manajemen Kursi</div>
-						</a>
+              <div class="sidebar-text">Manajemen Kursi</div>
+            </a>
           </li>
           <li
             title="Ulasan"
@@ -63,8 +71,8 @@
           >
             <a class="flex items-center gap-3" href="../ulasan/index.html">
               <i data-feather="message-circle"></i>
-							<div class="sidebar-text">Ulasan</div>
-						</a>
+              <div class="sidebar-text">Ulasan</div>
+            </a>
           </li>
         </ul>
         <div>
@@ -97,87 +105,83 @@
             </a>
           </div>
         </header>
-				<!-- Konten -->
-                <body class="bg-gray-200">
-                    <div class="flex w-full min-h-screen">
-                        <!-- Sidebar (sama seperti sebelumnya) -->
-                        <aside id="sidebar" class="bg-card-foreground text-white text-card border-r shadow-xl min-h-screen max-w-[250px] p-4 z-[100] flex flex-col fixed md:static">
-                            <!-- ... (kode sidebar sebelumnya) ... -->
-                        </aside>
-                        
-                        <!-- Konten Halaman -->
-                        <div class="flex-1 flex flex-col">
-                            <header class="flex justify-end shadow-sm border-b px-4 lg:px-8 py-2">
-                                <div class="flex items-center gap-3">
-                                    <!-- ... (kode avatar sebelumnya) ... -->
-                                </div>
-                            </header>
-                            <!-- Konten Tambah Menu -->
-                            <div class="px-4 md:px-8 py-8 flex items-center justify-center">
-                                <div class="max-w-md w-full">
-                                    <h1 class="font-bold text-xl text-center mb-8">Edit Menu</h1>
-                                    <form action="/proses-tambah-menu" method="post">
-                                        <!-- Form Edit Menu -->
-                                        <div class="mb-4">
-                                            <label for="namaMenu" class="block text-sm font-medium text-black font-bold text-xl text-center">Nama Menu</label>
-                                            <input type="text" id="namaMenu" name="namaMenu" class="mt-1 p-2 w-full border rounded-md" required placeholder="masukkan nama menu yang baru">
-                                        </div>
-                                        <div class="mb-4">
-                                            <label for="harga" class="block text-sm font-medium text-black font-bold text-xl text-center">Harga</label>
-                                            <input type="text" id="harga" name="harga" class="mt-1 p-2 w-full border rounded-md" required placeholder="masukkan nominal harga yang ingin diedit">
-                                        </div>
-                                        <div class="mb-4">
-                                            <label for="deskripsi" class="block text-sm font-medium text-black font-bold text-xl text-center">Deskripsi</label>
-                                            <textarea id="deskripsi" name="deskripsi" rows="3" class="mt-1 p-2 w-full border rounded-md" required placeholder="masukkan tentang deskripsi makanan ini"></textarea>
-                                        </div>
-                                        <div class="mb-4">
-                                            <label for="gambar" class="block text-sm font-medium text-black font-bold text-xl text-center ">Gambar</label>
-                                            <input type="file" id="gambar" name="gambar" class="mt-1 p-2 w-full border rounded-md" accept="image/*" required>
-                                        </div>
-                                        <div class="flex">
-                                            
-                                            <a href="../manajemen-menu" class="bg-primary/20 hover:bg-primary transition-all duration-300 text-black text-center px-4 py-2 rounded-lg mx-auto">
-                                               <button>Simpan</button> 
-                                            </a>
-                                            
-                                            <a href="../manajemen-menu" class="bg-primary/20 hover:bg-primary transition-all duration-300 text-black text-center px-4 py-2 rounded-lg mx-auto">
-                                                <button>Batal</button> 
-                                             </a>
-
-                                             <a href="../manajemen-menu" class="bg-primary/20 hover:bg-primary transition-all duration-300 text-black text-center px-4 py-2 rounded-lg mx-auto">
-                                                <button>Hapus</button> 
-                                             </a>
-
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-					<!-- Konten -->
-					<footer class="px-8 container mx-auto py-4 border-t">
-						Copyright © 2023 VI-Food.co
-					</footer>
+        <!-- Konten -->
+        <div class="px-4 md:px-8 py-8">
+          <div class="flex text-3xl font-bold pb-8">
+            <h1>Edit Menu</h1>
+          </div>
+          <hr class="border-t border-gray-300 mb-3" />
+          <form class="flex flex-col gap-3">
+            <!-- Nama Makanan -->
+            <label for="nama" class="text-md font-semibold">Nama Makanan</label>
+            <input
+              type="text"
+              id="nama"
+              placeholder="Masukkan Nama Makanan yang ingin ditambahkan"
+              class="h-10 px-4 py-2 rounded-lg"
+            />
+            <!-- nominal Harga -->
+            <label for="number" class="text-md font-semibold"
+              >Harga Makanan</label
+            >
+            <input
+              type="number"
+              id="number"
+              placeholder="Rp."
+              class="h-10 px-4 py-2 rounded-lg"
+            />
+            <!-- deskripsi -->
+            <label for="deskripsi" class="text-md font-semibold"
+              >Deskripsi</label
+            >
+            <textarea
+              name="deskripsi"
+              id="deskripsi"
+              cols="30"
+              rows="10"
+              placeholder="Tambahkan deskripsi..."
+              class="px-4 py-2 rounded-lg"
+            ></textarea>
+            <!-- gambar -->
+            <label for="gambar" class="text-md font-semibold">Gambar</label>
+            <input type="file" accept="*.png,*.jpg,*.jpeg" />
+            <div class="flex mt-4 gap-3">
+              <button
+                type="submit"
+                class="py-3 px-4 rounded-lg bg-primary text-white font-semibold text-sm hover:bg-primary/80 transition-all duration-300"
+              >
+                Simpan
+              </button>
+              <button
+                type="submit"
+                class="py-3 px-4 text-red-700 rounded-lg border-2 border-red-700 hover:text-white font-semibold text-sm hover:bg-red-700/80 transition-all duration-300"
+              >
+                Batal
+              </button>
+            </div>
+          </form>
+          <!-- Konten -->
+          <footer class="py-8">Copyright © 2023 VI-Food.co</footer>
         </div>
       </div>
     </div>
     <script>
       // Logika untuk sidebar
-      const tombolClose = $('#sidebar-tutup');
-      const sidebar = $('#sidebar');
-      const sidebarLogo = $('#sidebar-logo');
-      const sidebarTexts = $('.sidebar-text');
-      
+      const tombolClose = $("#sidebar-tutup");
+      const sidebar = $("#sidebar");
+      const sidebarLogo = $("#sidebar-logo");
+      const sidebarTexts = $(".sidebar-text");
+
       tombolClose.click(() => {
         sidebarTexts.each((i, e) => {
-          e.classList.toggle('hidden');
+          e.classList.toggle("hidden");
         });
-        sidebar.toggleClass('fixed');
+        sidebar.toggleClass("fixed");
         sidebarLogo.toggleClass("w-16 h-16");
         sidebarLogo.toggleClass("w-7 h-7");
       });
 
-      // Feather icon... 
+      // Feather icon...
       feather.replace();
     </script>
     <style>
