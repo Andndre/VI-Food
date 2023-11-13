@@ -110,81 +110,56 @@
         </header>
         <!-- Konten -->
         <div class="px-4 md:px-8 py-8">
-          <!-- manajemen kursi Mulai -->
-          <div class="flex flex-col gap-1.5 lg:">
-            <span class="text-3xl font-bold">Manajemen kursi</span>
-            <span> Kursi Kosong: 16</span>
-            <span>Kursi total: 75</span>
-
-            <div
-              class="lg:flex lg:flex-row lg:justify-end lg:items-end lg:pr-5"
-            >
-              <button class="bg-primary mt-3 px-2 py-2 rounded-md">
-                Tambah
+          <div class="flex flex-col lg:justify-between lg:items-center gap-3 pb-8 lg:flex-row  ">
+            <h1 class="font-bold text-xl">Semua Menu</h1>
+            <a href="../tambah-menu/index.html">
+              <button class="flex bg-primary rounded-md px-4 py-2 text sm mr-auto lg:mr-0 hover:bg-primary/75 font-medium text-white ">
+                <i data-feather="circle" class="text-white text-sm mr-3" ></i> Tambahkan Kursi
               </button>
-            </div>
-            <div
-              class="border border-collapse border-slate-400 snap-x mt-6 max-w-full"
-            >
-              <table class="snap-start w-full">
-                <thead class="bg-gray-500 text-white">
-                  <tr>
-                    <th class="min-w-[12rem] border border-black">
-                      Kode Kursi
-                    </th>
-                    <th class="text-center min-w-[12rem] border border-black">Status</th>
-                    <th class="text-center min-w-[12rem] border border-black">Aksi</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="border border-black text-center">s45</td>
-                    <td class="border border-black p-3">
-                      <div class="flex justify-center">
-                        <span class="px-2 text-sm py-1 rounded-md bg-green-100 text-center"
-                          >
-                      Kosong</span
-                      >
-                    </div>
-                    </td>
-                    <td class="border border-black">
-                      <div class="flex justify-center">
-                        <button
-                          class="px-2 text-sm py-1 rounded-md bg-yellow-100"
-                        >
-                          Edit
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="border border-black text-center">5f3</td>
-                    <td class="border border-black p-3">
-                      <div class="flex justify-center">
-                        <span class="px-2 text-sm py-1 rounded-md bg-green-100"
-                          >
-                      Kosong</span>
-                    </div>
-                    </td>
-                    <td class="border border-black">
-                      <div class="flex justify-center">
-                        <button
-                          class="px-2 text-sm py-1 rounded-md bg-yellow-100"
-                        >
-                          Edit
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+            </a>
           </div>
-
-          <!-- manajemen kursi selesai -->
+          <div class="grid grid-cols-12 gap-4">
+            <!-- Card Start -->
+            <div class="overflow-hidden col-span-6 md:col-span-4 lg:col-span-3 bg-white rounded shadow-sm">
+              <img class="w-full object-cover aspect-video" src="https://jeparawood.com/wp-content/uploads/2022/01/kursi-makan-sederhana.jpg" alt="">
+              <div class="p-4 space-y-2">
+                <h3 class="font-bold text-lg">Kursi Bucu Kangin<h3>
+                  <!-- Label -->
+                <span class="inline-flex items-center bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">
+                  <span class="w-2 h-2 me-1 bg-green-500 rounded-full"></span>
+                  Available
+                </span>
+                <!-- End Label -->
+                <div class="flex justify-between items-center flex-wrap gap-3 pt-4">
+                  <span class="text-sm text-gray-400 font-semibold">Sewa Rp. 2.000</span>
+                  <a class="flex gap-2 items-center text-sm px-4 py-2 ml-auto bg-primary/20 hover:bg-primary transition-all duration-300 font-semibold rounded-lg" href="/tempat/index.html"><i class="h-5" data-feather="edit-2"></i> Edit</a>
+                </div>
+              </div>
+            </div>
+            <!-- Card End -->
+            <!-- Card Start -->
+            <div class="overflow-hidden col-span-6 md:col-span-4 lg:col-span-3 bg-white rounded shadow-sm">
+              <img class="w-full object-cover aspect-video" src="https://www.jatijeparamebel.com/wp-content/uploads/2021/03/Set-Kursi-Meja-Makan-Balero-Jok-Busa-Dudukan-Minimalis-Kayu-Jati-JJM-SKMN-050.jpg" alt="">
+              <div class="p-4 space-y-2">
+                <h3 class="font-bold text-lg">Kursi Blok 2A<h3>
+                  <!-- Label -->
+                <span class="inline-flex items-center bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full">
+                  <span class="w-2 h-2 me-1 bg-red-500 rounded-full"></span>
+                  Full
+                </span>
+                <!-- End Label -->
+                <div class="flex justify-between items-center flex-wrap gap-3 pt-4">
+                  <span class="text-sm text-gray-400 font-semibold">Sewa Rp. 2.000</span>
+                  <a class="flex gap-2 items-center text-sm px-4 py-2 ml-auto bg-red-800/20 hover:bg-red-800 hover:text-white transition-all duration-300 font-semibold rounded-lg" href="#"><i class="h-5" data-feather="x-circle"></i> Jadikan tersedia</a>
+                  <a class="flex gap-2 items-center text-sm px-4 py-2 ml-auto bg-primary/20 hover:bg-primary transition-all duration-300 font-semibold rounded-lg" href="/tempat/index.html"><i class="h-5" data-feather="edit-2"></i> Edit</a>
+                </div>
+              </div>
+            </div>
+            <!-- Card End -->
+					</div>
         </div>
         <!-- Konten -->
-        <footer class="px-8 container mx-auto py-4 border-t">
+        <footer class="px-4 md:px-8 py-4 border-t">
           Copyright © 2023 VI-Food.co
         </footer>
       </div>
