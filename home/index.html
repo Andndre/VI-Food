@@ -1,256 +1,302 @@
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VI Food</title>
-    <link rel="stylesheet" href="../css/dist/output.css">
-		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js' integrity='sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==' crossorigin='anonymous'></script>
-		<script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.js"></script>
-</head>
-<body class="bg-gray-200 pb-6">
-	<!-- Navbar -->
-	<nav class="bg-white shadow-sm">
-		<div class="flex items-center h-16 justify-between w-full gap-6 container mx-auto px-4">
-			<a href="/"><img src="../public/logo.svg" alt="logo" class="h-5"></a>
-			<div class="flex gap-4 items-center">
-				<div class="flex gap-3 items-center">
-					<a class="flex gap-2 items-center px-6 py-3 bg-primary/10 hover:bg-primary/25 transition-all duration-300 rounded-md" href="../pembelian"><i data-feather="bar-chart-2"></i> Pembelian</a>
-					<a class="flex gap-2 items-center px-6 py-3 bg-primary/10 hover:bg-primary/25 transition-all duration-300 rounded-md" href="../keranjang/"><i data-feather="shopping-cart"></i> Keranjang</a>
-				</div>
-				<a href="../profil/">
-					<div class="w-10 h-10 bg-gray-400 rounded-full"></div>
-				</a>
-			</div>
-		</div>
-	</nav>
-	<!-- Header w/Search -->
-	<div class="container mx-auto">
-		<div class="mx-4 mt-4 bg-cover rounded-2xl px-6 py-24 lg:py-36 bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsouIA8z5MLF0d2Z7NnunT8Sp7QvVaqbFCZA&usqp=CAU')] text-white text-center space-y-4">
-			<h1 class="font-bold text-3xl lg:text-4xl">Mau Makan Apa Hari ini?</h1>
-			<p class="text-center text-sm lg:text-base text-gray-400">Temukan tempat makan di sekitar anda yang jarang orang ketahui!</p>
-			<div class="mb-4 relative left-1/2 -translate-x-1/2 max-w-sm">
-				<input type="text" id="username" name="username" class="w-full px-8 pl-14 py-2 lg:py-3 hover:border-primary border-[3px] rounded-2xl bg-white text-black" placeholder="Cari makanan, tempat makan, dll...">
-				<i data-feather="search" class="absolute z-50 top-0 bottom-0 left-4 h-full text-primary"></i>
-			</div>
-		</div>
-		<div class="pt-6"></div>
-		<div class="grid grid-cols-12 container mx-auto px-4 gap-6">
-			<!-- Filter -->
-			<aside class="col-span-12 md:col-span-4 lg:col-span-3 p-6 bg-white shadow-sm rounded-2xl mb-auto">
-				<h2 class="font-bold text-2xl">Filter</h2>
-				<form class="space-y-3">
-					<div class="space-y-2">
-						<h3>Lokasi</h3>
-						<div>
-							<div class="flex gap-3 items-center">
-								<input type="checkbox" name="" id="">
-								<span>Singaraja</span>
-							</div>
-							<div class="flex gap-3 items-center">
-								<input type="checkbox" name="" id="">
-								<span>Kintamani</span>
-							</div>
-							<div class="flex gap-3 items-center">
-								<input type="checkbox" name="" id="">
-								<span>Karangasem</span>
-							</div>
-							<div class="flex gap-3 items-center">
-								<input type="checkbox" name="" id="">
-								<span>Klungkung</span>
-							</div>
-						</div>
-					</div>
-					<div class="space-y-2">
-						<h3>Rentang Harga</h3>
-						<div>
-							<div class="flex gap-3 items-center">
-								<input type="checkbox" name="" id="">
-								<span>5-10 ribu</span>
-							</div>
-							<div class="flex gap-3 items-center">
-								<input type="checkbox" name="" id="">
-								<span>10-20 ribu</span>
-							</div>
-							<div class="flex gap-3 items-center">
-								<input type="checkbox" name="" id="">
-								<span>20-30 ribu</span>
-							</div>
-							<div class="flex gap-3 items-center">
-								<input type="checkbox" name="" id="">
-								<span>&gt; 40 ribu </span>
-							</div>
-						</div>
-					</div>
-				</form>
-			</aside>
-			<!-- Tempat Makan -->
-			<div class="col-span-12 md:col-span-8 lg:col-span-9">
-				<h2 class="font-bold text-xl">Rekomendasi</h2>
-				<!-- Grup Menu Rekomendasi -->
-				<div class="grid grid-cols-12 pt-4 gap-4">
-					<!-- Card Start -->
-					<div class="overflow-hidden col-span-12 md:col-span-6 lg:col-span-4 bg-white rounded-2xl shadow-sm">
-						<img class="w-full aspect-video object-cover" src="https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2023/08/01045246/ini-resep-mie-goreng-dengan-bahan-sederhana-yang-menggugah-selera-halodoc.jpg.webp" alt="">
-						<div class="p-4 space-y-2 text-sm">
-							<h3 class="font-bold text-xl">Mie Goreng Sehat<h3>
-							<div class="space-y-2">
-								<div class="flex items-center text-gray-500 ">
-									<i data-feather="map-pin" class="h-5 mr-2"></i>
-									Jalan Wijaya Kusuma Gg 3 Singaraja
-								</div>
-								<div class="flex items-center text-gray-500 ">
-									<i data-feather="map" class="h-5 mr-2"></i>
-									Warung Pak Wayan
-								</div>
-								<div class="flex items-center text-gray-500">
-									<i data-feather="clock" class="h-5 mr-2"></i>
-									Buka 08:00 - 18:00 WITA</div>
-							</div>
+    <link rel="stylesheet" href="../css/dist/output.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.js"></script>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.1.1/flowbite.min.css"  rel="stylesheet" />
+  </head>
+  <body class="bg-gray-200 pb-6">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm">
+      <div
+        class="flex items-center h-16 justify-between w-full gap-6 container mx-auto px-4"
+      >
+        <a href="/"><img src="../public/logo.svg" alt="logo" class="h-5" /></a>
+        <div class="flex gap-4 items-center">
+          <div class="flex gap-3 items-center">
+            <a
+              class="flex gap-2 items-center px-6 py-3 bg-primary/10 hover:bg-primary/25 transition-all duration-300 rounded-md"
+              href="../pembelian"
+              ><i data-feather="bar-chart-2"></i> Pembelian</a
+            >
+            <a
+              class="flex gap-2 items-center px-6 py-3 bg-primary/10 hover:bg-primary/25 transition-all duration-300 rounded-md"
+              href="../keranjang/"
+              ><i data-feather="shopping-cart"></i> Keranjang</a
+            >
+          </div>
+          <a href="../profil/">
+            <div class="w-10 h-10 bg-gray-400 rounded-full"></div>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="container mx-auto max-w-5xl grid grid-cols-12 gap-3 px-4 py-8">
+      <div
+        class="col-span-12 md:col-span-7 lg:col-span-9 grid grid-cols-1 gap-3"
+      >
+        <h1 class="font-bold text-2xl">Selamat sore, Andre</h1>
+        <div class="rounded-lg pt-4 flex items-center gap-3">
+          <img
+            class="w-10 h-10 rounded-full"
+            src="https://avatars.githubusercontent.com/u/81848639?v=4"
+            alt="Rounded avatar"
+          />
+          <form class="flex-1">
+            <div class="relative">
+              <div
+                class="absolute flex items-center ps-3 pointer-events-none top-0 bottom-0 left-4"
+              >
+                <svg
+                  class="w-4 h-4 text-gray-500"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                  />
+                </svg>
+              </div>
+              <input
+                type="search"
+                id="default-search"
+                class="w-full pl-14 pt-4 pb-4 pr-4 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-primary focus:border-primary"
+                placeholder="Cari makanan..."
+                required
+              />
+              <button
+                type="submit"
+                class="absolute top-0 end-0 p-2.5 text-sm font-medium h-full text-white bg-primary rounded-e-lg border border-primary hover:bg-primary/80 focus:ring-4 focus:outline-none focus:ring-primary"
+              >
+                <svg
+                  class="w-4 h-4"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                  />
+                </svg>
+                <span class="sr-only">Search</span>
+              </button>
+            </div>
+          </form>
+        </div>
+        <p class="font-bold">Ulasan teratas</p>
+        <div class="rounded-lg bg-white">
+          <div class="flex gap-3 p-4">
+            <img
+              class="w-10 h-10 rounded-full"
+              src="https://sribu-2022.s3.amazonaws.com/assets/media/contest_detail/2016/7/desain-logo-untuk-rumah-makan-sentral-57845f43ca6bcb8bcc000006/e8725fac2f.png"
+              alt="Rounded avatar"
+            />
+            <div class="space-y-2">
+              <span class="font-bold">Warung Pak Wayan</span>
+              <div class="flex gap-1">
+                <svg
+                  class="w-4 h-4 text-yellow-300"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 22 20"
+                >
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-yellow-300"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 22 20"
+                >
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-yellow-300"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 22 20"
+                >
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-yellow-300"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 22 20"
+                >
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-gray-300"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 22 20"
+                >
+                  <path
+                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                  />
+                </svg>
+              </div>
+              <p class="pt-2 text-sm">
+                <span class="font-bold">Oleh </span>
+                <a class="underline" href="#">Andndre</a>
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+                fuga libero eius nesciunt mollitia cumque molestias sequi rerum
+                aliquam saepe.
+              </p>
+            </div>
+          </div>
 
-							<div class="flex justify-between items-center flex-wrap gap-3 pt-4">
-								<span class="text-lg text-gray-400 font-semibold">Rp. 12.000,00</span>
-								<a class="px-6 py-3 ml-auto bg-primary/20 hover:bg-primary transition-all duration-300 font-semibold rounded-lg" href="/tempat/index.html">Lihat</a>
-							</div>
-						</div>
-					</div>
-					<!-- Card End -->
-					<!-- Card Start -->
-					<div class="overflow-hidden col-span-12 md:col-span-6 lg:col-span-4 bg-white rounded-2xl shadow-sm">
-						<img class="w-full aspect-video object-cover" src="https://cdn.idntimes.com/content-images/post/20220414/258537864-4512524435507508-6572717919153111441-n-2dbb2782cce8e1857deda55946bcaa25_600x400.jpg" alt="">
-						<div class="p-4 space-y-2 text-sm">
-							<h3 class="font-bold text-xl">Babi Guling<h3>
-							<div class="space-y-2">
-								<div class="flex items-center text-gray-500 ">
-									<i data-feather="map-pin" class="h-5 mr-2"></i>
-									Jalan Wijaya Kusuma Gg 3 Singaraja
-								</div>
-								<div class="flex items-center text-gray-500 ">
-									<i data-feather="map" class="h-5 mr-2"></i>
-									Warung Pak Wayan
-								</div>
-								<div class="flex items-center text-gray-500">
-									<i data-feather="clock" class="h-5 mr-2"></i>
-									Buka 08:00 - 18:00 WITA</div>
-							</div>
-
-							<div class="flex justify-between items-center flex-wrap gap-3 pt-4">
-								<span class="text-lg text-gray-400 font-semibold">Rp. 12.000,00</span>
-								<a class="px-6 py-3 ml-auto bg-primary/20 hover:bg-primary transition-all duration-300 font-semibold rounded-lg" href="/tempat/index.html">Lihat</a>
-							</div>
-						</div>
-					</div>
-					<!-- Card End -->
-					<!-- Card Start -->
-					<div class="overflow-hidden col-span-12 md:col-span-6 lg:col-span-4 bg-white rounded-2xl shadow-sm">
-						<img class="w-full aspect-video object-cover" src="https://www.astronauts.id/blog/wp-content/uploads/2023/01/Ini-Resep-Bakso-Urat-yang-Empuk-dan-Lembut-1200x900.jpg" alt="">
-						<div class="p-4 space-y-2 text-sm">
-							<h3 class="font-bold text-xl">Bakso Urat<h3>
-							<div class="space-y-2">
-								<div class="flex items-center text-gray-500 ">
-									<i data-feather="map-pin" class="h-5 mr-2"></i>
-									Jalan Wijaya Kusuma Gg 3 Singaraja
-								</div>
-								<div class="flex items-center text-gray-500 ">
-									<i data-feather="map" class="h-5 mr-2"></i>
-									Warung Pak Wayan
-								</div>
-								<div class="flex items-center text-gray-500">
-									<i data-feather="clock" class="h-5 mr-2"></i>
-									Buka 08:00 - 18:00 WITA</div>
-							</div>
-
-							<div class="flex justify-between items-center flex-wrap gap-3 pt-4">
-								<span class="text-lg text-gray-400 font-semibold">Rp. 12.000,00</span>
-								<a class="px-6 py-3 ml-auto bg-primary/20 hover:bg-primary transition-all duration-300 font-semibold rounded-lg" href="/tempat/index.html">Lihat</a>
-							</div>
-						</div>
-					</div>
-					<!-- Card End -->
-					<!-- Card Start -->
-					<div class="overflow-hidden col-span-12 md:col-span-6 lg:col-span-4 bg-white rounded-2xl shadow-sm">
-						<img class="w-full aspect-video object-cover" src="https://cdn0-production-images-kly.akamaized.net/P20zwAGcL1t5dpmJCUGjlZjqU70=/1x68:1000x631/469x260/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4525355/original/040795900_1691112723-shutterstock_2190434085.jpg" alt="">
-						<div class="p-4 space-y-2 text-sm">
-							<h3 class="font-bold text-xl">Batagor Tahu<h3>
-							<div class="space-y-2">
-								<div class="flex items-center text-gray-500 ">
-									<i data-feather="map-pin" class="h-5 mr-2"></i>
-									Jalan Wijaya Kusuma Gg 3 Singaraja
-								</div>
-								<div class="flex items-center text-gray-500 ">
-									<i data-feather="map" class="h-5 mr-2"></i>
-									Warung Pak Wayan
-								</div>
-								<div class="flex items-center text-gray-500">
-									<i data-feather="clock" class="h-5 mr-2"></i>
-									Buka 08:00 - 18:00 WITA</div>
-							</div>
-
-							<div class="flex justify-between items-center flex-wrap gap-3 pt-4">
-								<span class="text-lg text-gray-400 font-semibold">Rp. 12.000,00</span>
-								<a class="px-6 py-3 ml-auto bg-primary/20 hover:bg-primary transition-all duration-300 font-semibold rounded-lg" href="/tempat/index.html">Lihat</a>
-							</div>
-						</div>
-					</div>
-					<!-- Card End -->
-					<!-- Card Start -->
-					<div class="overflow-hidden col-span-12 md:col-span-6 lg:col-span-4 bg-white rounded-2xl shadow-sm">
-						<img class="w-full aspect-video object-cover" src="https://images.tokopedia.net/img/cache/700/VqbcmM/2021/3/4/1293dd51-c3cf-465d-97d7-62516be91e5f.jpg" alt="">
-						<div class="p-4 space-y-2 text-sm">
-							<h3 class="font-bold text-xl">Siobak Jaen<h3>
-							<div class="space-y-2">
-								<div class="flex items-center text-gray-500 ">
-									<i data-feather="map-pin" class="h-5 mr-2"></i>
-									Jalan Wijaya Kusuma Gg 3 Singaraja
-								</div>
-								<div class="flex items-center text-gray-500 ">
-									<i data-feather="map" class="h-5 mr-2"></i>
-									Warung Pak Wayan
-								</div>
-								<div class="flex items-center text-gray-500">
-									<i data-feather="clock" class="h-5 mr-2"></i>
-									Buka 08:00 - 18:00 WITA</div>
-							</div>
-
-							<div class="flex justify-between items-center flex-wrap gap-3 pt-4">
-								<span class="text-lg text-gray-400 font-semibold">Rp. 12.000,00</span>
-								<a class="px-6 py-3 ml-auto bg-primary/20 hover:bg-primary transition-all duration-300 font-semibold rounded-lg" href="/tempat/index.html">Lihat</a>
-							</div>
-						</div>
-					</div>
-					<!-- Card End -->
-					<!-- Card Start -->
-					<div class="overflow-hidden col-span-12 md:col-span-6 lg:col-span-4 bg-white rounded-2xl shadow-sm">
-						<img class="w-full aspect-video" src="https://resepkoki.id/wp-content/uploads/2016/11/Resep-Fuyunghai.jpg" alt="">
-						<div class="p-4 space-y-2 text-sm">
-							<h3 class="font-bold text-xl">Fuyunghai<h3>
-							<div class="space-y-2">
-								<div class="flex items-center text-gray-500 ">
-									<i data-feather="map-pin" class="h-5 mr-2"></i>
-									Jalan Wijaya Kusuma Gg 3 Singaraja
-								</div>
-								<div class="flex items-center text-gray-500 ">
-									<i data-feather="map" class="h-5 mr-2"></i>
-									Warung Pak Wayan
-								</div>
-								<div class="flex items-center text-gray-500">
-									<i data-feather="clock" class="h-5 mr-2"></i>
-									Buka 08:00 - 18:00 WITA</div>
-							</div>
-
-							<div class="flex justify-between items-center flex-wrap gap-3 pt-4">
-								<span class="text-lg text-gray-400 font-semibold">Rp. 12.000,00</span>
-								<a class="px-6 py-3 ml-auto bg-primary/20 hover:bg-primary transition-all duration-300 font-semibold rounded-lg" href="/tempat/index.html">Lihat</a>
-							</div>
-						</div>
-					</div>
-					<!-- Card End -->
-				</div>
-			</div>
-		</div>
-	</div>
-	<script>
-		feather.replace();
-	</script>
-</body>
+          <div
+            id="controls-carousel"
+            class="relative w-full"
+            data-carousel="static"
+          >
+            <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img
+                  src="https://wanderluxe.s3-ap-southeast-1.amazonaws.com/wp-content/uploads/2016/04/revolver1.jpg"
+                  class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                  alt="..."
+                />
+              </div>
+              <div
+                class="hidden duration-700 ease-in-out"
+                data-carousel-item="active"
+              >
+                <img
+                  src="https://postcardsfromhawaii.co/wp-content/uploads/2018/11/header-1.jpg"
+                  class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                  alt="..."
+                />
+              </div>
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img
+                  src="https://static.thehoneycombers.com/wp-content/uploads/sites/4/2022/02/Cafe-Organic-Restaurant-in-Seminyak-Bali-900x643.jpg"
+                  class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                  alt="..."
+                />
+              </div>
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9G9mju8U1GNUqPCHueV1phtaOWmSFXLPaWg&usqp=CAU"
+                  class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                  alt="..."
+                />
+              </div>
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrfEyTm2XH2FZrFaUIbJhnrWl9AwNX1jQbpw&usqp=CAU"
+                  class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                  alt="..."
+                />
+              </div>
+            </div>
+            <button
+              type="button"
+              class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+              data-carousel-prev
+            >
+              <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none"
+              >
+                <svg
+                  class="w-4 h-4 text-white rtl:rotate-180"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 6 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 1 1 5l4 4"
+                  />
+                </svg>
+                <span class="sr-only">Previous</span>
+              </span>
+            </button>
+            <button
+              type="button"
+              class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+              data-carousel-next
+            >
+              <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none"
+              >
+                <svg
+                  class="w-4 h-4 text-white rtl:rotate-180"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 6 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 9 4-4-4-4"
+                  />
+                </svg>
+                <span class="sr-only">Next</span>
+              </span>
+            </button>
+          </div>
+          <div class="p-3"><a href="../tempat/" class="w-full border-2 border-primary text-center py-3 block text-primary hover:text-white hover:bg-primary rounded-lg">Kunjungi Tempat Makan</a></div>
+        </div>
+      </div>
+      <div
+        class="col-span-12 md:col-span-5 lg:col-span-3 "
+      >
+        <div class="bg-white p-4 rounded-lg sticky top-4">
+          <h2 class="font-bold text-lg">Home</h2>
+          <div class="pt-3"></div>
+          <p class="text-sm">Halo, Andre! ini adalah rekomendasi anda berdasarkan beberapa informasi berikut: Lokasi dan History pemesanan.</p>
+          <p class="text-sm pt-3">Jika anda ingin mendapatkan rekomendasi yang lebih akurat, anda bisa mengupdate Lokasi anda di Pengaturan</p>
+          <a href="../explore/" class="w-full mt-3 border-2 border-primary text-center py-3 block text-white bg-primary rounded-lg">Explore Menu</a>
+        </div>
+      </div>
+    </div>
+    <script>
+      feather.replace();
+    </script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.1.1/flowbite.min.js"></script>
+  </body>
 </html>
