@@ -108,7 +108,7 @@
         <!-- Konten -->
         <div class="px-4 md:px-8 py-8">
           <div class="flex text-3xl font-bold pb-8">
-            <h1>Tambah Menu</h1>
+            <h1>Edit Menu</h1>
           </div>
           <hr class="border-t border-gray-300 mb-3" />
           <form class="flex flex-col gap-3">
@@ -145,12 +145,18 @@
             <!-- gambar -->
             <label for="gambar" class="text-md font-semibold">Gambar</label>
             <input type="file" accept="*.png,*.jpg,*.jpeg" />
-            <div class="flex mt-4">
+            <div class="flex mt-4 gap-3">
               <button
                 type="submit"
                 class="py-3 px-4 rounded-lg bg-primary text-white font-semibold text-sm hover:bg-primary/80 transition-all duration-300"
               >
                 Simpan
+              </button>
+              <button
+                type="submit"
+                class="py-3 px-4 text-red-700 rounded-lg border-2 border-red-700 hover:text-white font-semibold text-sm hover:bg-red-700/80 transition-all duration-300"
+              >
+                Batal
               </button>
             </div>
           </form>
